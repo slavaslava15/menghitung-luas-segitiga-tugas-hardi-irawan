@@ -1,0 +1,36 @@
+<body>
+
+  <h1><marquee direction ="Down">menghitung luas segitiga</marquee></h1>
+
+<form id="form1" name="form" method="post" action="">
+  <p>alas : 
+    <input type="text" name="alas"/>
+</p>
+  <p>
+    tinggi : 
+    <input type="text" name="tinggi"/>
+</p>
+<p>
+    Hasil : 
+    <input type="text" name="hasil"/>
+</p>
+  <p>
+    <input type="button" onclick="hitung()" value ="hitung"/>
+    <input type="reset">
+  </p>
+</form>
+
+<script>
+  function cek(){
+    if(form.alas.value=="" || form.tinggi.value==""){
+    alert("angka kosong");
+    exit
+    }
+  }
+  function hitung() {
+    cek();
+    a=parseInt(form.alas.value);
+    t=parseInt(form.tinggi.value);
+    form.hasil.value=a*t/2;
+  }
+</script>
